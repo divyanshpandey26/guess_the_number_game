@@ -1,0 +1,33 @@
+import random
+
+def number_guessing_game():
+    print("*********WELCOME TO THE GAME OF DIVYANSH PANDEY************")
+    print("\n\nTODAY I AM GOING TO RANDOMLY SELECT A NUMBER BETWEEN 1 TO 100")
+    print("\n\nLETS SE IN HOW MANY ATTEMPTS YOU ARE GOING TO PREDICT THE NUMBER\n")
+    
+    guess=random.randint(1,100)
+    
+    
+    attempts=1
+    guessed_number=0
+    
+    while guessed_number!=guess:
+        guessed_number=int(input("GUESS THE NUMBER : "))
+        
+        attempts=attempts+1
+        
+        if(guessed_number<guess):
+            print("YOUR GUESS IS TOO LOW PLEASE TRY AGAIN!")
+         
+        elif(guessed_number>guess):
+            print("YOUR GUESS IS TOO HIGH, PLEASE TRY AGAIN!")
+            
+        else:
+            print("***CONGRATULATIONS YOU GUESSED IT RIGHT**")
+            print("You took",attempts,"attempts to guess the answer")
+number_guessing_game()            
+        
+        
+    
+   
+
